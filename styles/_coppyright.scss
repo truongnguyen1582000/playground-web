@@ -1,0 +1,26 @@
+.coppyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 190px;
+
+    padding-top: 30px;
+    border-top: 3px solid $blur-color;
+
+    &-privacy {
+        font-size: 14px;
+    }
+
+    &-link {
+        &:first-child {
+            color: $text-color;
+            margin-right: 15px;
+        }
+    }
+
+    &-coppyright {
+        color: $text-color;
+        font-size: 14px;
+    }
+}

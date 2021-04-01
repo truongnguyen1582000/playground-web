@@ -1,0 +1,25 @@
+.footer {
+    padding-top: 56px;
+    margin-top: 86px;
+    margin-bottom: 210px;
+    border-top: 4px solid $text-color;
+
+    display: flex;
+
+    &-logo {
+        margin-right: 144px;
+    }
+
+    &-list {
+        margin-right: 162px;
+    }
+
+    &-item {
+        margin-bottom: 30px;
+    }
+
+    &-link {
+        color: $text-color;
+        text-shadow: 0 0 1px $text-color;
+    }
+}

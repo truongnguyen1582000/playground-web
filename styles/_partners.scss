@@ -1,0 +1,28 @@
+.partners {
+    margin-top: 190px;
+    &-heading {
+        text-align: center;
+        color: $text-color;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 75px;
+    }
+
+    &-list {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        border-top: 3px solid $text-color;
+    }
+
+    &-item {
+        &:not(:last-child) {
+            margin-right: 100px;
+        }
+    }
+
+    &-img {
+    }
+}

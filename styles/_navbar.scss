@@ -1,0 +1,43 @@
+.navbar {
+    height: 10vh;
+
+    padding: 40px 0;
+
+    display: flex;
+    align-items: center;
+
+    &-logo {
+        font-size: 25px;
+        font-weight: bold;
+        span {
+            color: $text-color;
+            &:first-child {
+                color: #ffc87a;
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+
+        &-item {
+            margin-right: 50px;
+        }
+
+        &-link {
+            color: $text-color;
+        }
+
+        &-icon {
+            font-size: 12px;
+            color: #7a84a2;
+        }
+    }
+
+    &-logo {
+        margin-right: auto;
+    }
+
+    &__auth {
+    }
+}

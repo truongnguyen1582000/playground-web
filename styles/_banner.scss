@@ -1,0 +1,30 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 100px 0;
+
+    &-heading {
+        color: $text-color;
+        font-size: 70px;
+        font-weight: bold;
+        margin-bottom: 36px;
+    }
+
+    &-desc {
+        color: $blur-color;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 300;
+        max-width: 686px;
+        margin-bottom: 44px;
+        line-height: 1.3;
+    }
+
+    &-action {
+        .btn--yellow {
+            margin-left: 26px;
+        }
+    }
+}
