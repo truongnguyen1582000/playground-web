@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 180px;
+
     &__title {
         color: $text-color;
         font-size: 28px;
@@ -22,7 +23,7 @@
 
     &__input {
         background-color: #f2f1f6;
-        width: 100%;
+        width: 80%;
         height: 60px;
         padding-left: 25px;
         outline: none;
