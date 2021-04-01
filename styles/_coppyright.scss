@@ -13,8 +13,9 @@
     }
 
     &-link {
+        color: $text-color;
+
         &:first-child {
-            color: $text-color;
             margin-right: 15px;
         }
     }

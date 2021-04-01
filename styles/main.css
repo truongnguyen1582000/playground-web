@@ -562,8 +562,11 @@ body {
   font-size: 14px;
 }
 
-.coppyright-link:first-child {
+.coppyright-link {
   color: #1a2b5f;
+}
+
+.coppyright-link:first-child {
   margin-right: 15px;
 }
 
