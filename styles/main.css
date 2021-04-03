@@ -257,6 +257,7 @@ body {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  z-index: 2;
 }
 
 .feature-item:nth-child(2) .feature-info {
@@ -583,6 +584,84 @@ body {
   .banner-heading {
     font-size: 46px;
   }
+  .feature-info {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+  .feature-title {
+    font-size: 26px;
+  }
+  .feature-desc {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  .feature-intro__item {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .feature-item:nth-child(2) .feature-info {
+    margin-right: 50px;
+  }
+  .feature-item:nth-child(3) .feature-intro__item {
+    margin-right: 0;
+    width: unset;
+  }
+  .feature-item:nth-child(3) .feature-intro__img {
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+  }
+  .feature-item:nth-child(3) .feature-img {
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .feature-item:nth-child(3) .feature-intro__title {
+    display: inline-block;
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  .partners-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 40px;
+  }
+  .partners-item {
+    width: 50%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .partners-item:not(:last-child) {
+    margin-right: 0;
+  }
+  .partners-img {
+    display: inline-block;
+  }
+  .subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+  }
+  .subscribe__title {
+    margin-bottom: 20px;
+  }
+  .subscribe__form {
+    width: 100%;
+  }
+  .footer {
+    margin-bottom: 160px;
+  }
+  .footer-logo {
+    margin-right: 100px;
+  }
+  .footer-list {
+    margin-right: 120px;
+    display: block;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -625,6 +704,16 @@ body {
     width: 50%;
     margin: 0;
     margin-bottom: 20px;
+    -webkit-animation: bounceInRight;
+            animation: bounceInRight;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+  .feature-item:nth-child(3) .feature-intro__item:nth-child(2n) {
+    -webkit-animation: bounceInLeft;
+            animation: bounceInLeft;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
   .feature-item:nth-child(3) .feature-intro__item:nth-child(2n + 1) {
     padding-right: 30px;
@@ -662,6 +751,12 @@ body {
     font-size: 14px;
     margin-bottom: 30px;
   }
+  .feature-item .btn {
+    -webkit-animation: shakeY;
+            animation: shakeY;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+  }
   .banner {
     padding: 50px 0;
   }
@@ -674,6 +769,16 @@ body {
   .category__item {
     width: 270px;
     margin: 0 auto 40px;
+    -webkit-animation: fadeInRightBig;
+            animation: fadeInRightBig;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
+  }
+  .category__item:nth-child(2n + 1) {
+    -webkit-animation: fadeInLeftBig;
+            animation: fadeInLeftBig;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
   }
   .partners {
     margin-top: 100px;
@@ -687,6 +792,10 @@ body {
   }
   .partners-item {
     width: 100%;
+    -webkit-animation: fadeInRight;
+            animation: fadeInRight;
+    -webkit-animation-duration: 0.8s;
+            animation-duration: 0.8s;
   }
   .partners-img {
     display: block;
@@ -738,15 +847,26 @@ body {
     padding: 0;
   }
   .footer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 50px;
   }
   .footer-logo {
     margin-bottom: 40px;
+    display: block;
+    margin: 0 auto;
   }
   .footer-list {
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-right: 0;
+  }
+  .footer-item {
+    text-align: center;
   }
   .coppyright {
     -webkit-box-orient: vertical;

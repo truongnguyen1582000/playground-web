@@ -2,6 +2,101 @@
     .banner-heading {
         font-size: 46px;
     }
+
+    .feature-info {
+        margin-top: 0;
+        margin-left: 50px;
+    }
+
+    .feature-title {
+        font-size: 26px;
+    }
+
+    .feature-desc {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .feature-intro__item {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .feature-item {
+        &:nth-child(2) {
+            .feature-info {
+                margin-right: 50px;
+            }
+        }
+
+        &:nth-child(3) {
+            .feature-intro__item {
+                margin-right: 0;
+                width: unset;
+            }
+
+            .feature-intro__img {
+                display: inline-block;
+                margin: 0;
+                margin-right: 10px;
+            }
+
+            .feature-img {
+                object-fit: fill;
+            }
+
+            .feature-intro__title {
+                display: inline-block;
+                transform: translateY(-15px);
+            }
+        }
+    }
+
+    .partners-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+
+    .partners-item {
+        width: 50%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .partners-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .partners-img {
+        display: inline-block;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .subscribe__title {
+        margin-bottom: 20px;
+    }
+
+    .subscribe__form {
+        width: 100%;
+    }
+
+    .footer {
+        margin-bottom: 160px;
+    }
+
+    .footer-logo {
+        margin-right: 100px;
+    }
+
+    .footer-list {
+        margin-right: 120px;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -46,6 +141,14 @@
             width: 50%;
             margin: 0;
             margin-bottom: 20px;
+
+            animation: bounceInRight;
+            animation-duration: 1s;
+
+            &:nth-child(2n) {
+                animation: bounceInLeft;
+                animation-duration: 1s;
+            }
 
             &:nth-child(2n + 1) {
                 padding-right: 30px;
@@ -95,6 +198,11 @@
         margin-bottom: 30px;
     }
 
+    .feature-item .btn {
+        animation: shakeY;
+        animation-duration: 0.8s;
+    }
+
     .banner {
         padding: 50px 0;
     }
@@ -110,6 +218,14 @@
     .category__item {
         width: 270px;
         margin: 0 auto 40px;
+
+        animation: fadeInRightBig;
+        animation-duration: 0.8s;
+
+        &:nth-child(2n + 1) {
+            animation: fadeInLeftBig;
+            animation-duration: 0.8s;
+        }
     }
 
     .partners {
@@ -123,6 +239,9 @@
 
     .partners-item {
         width: 100%;
+
+        animation: fadeInRight;
+        animation-duration: 0.8s;
     }
 
     .partners-img {
@@ -183,16 +302,24 @@
     }
 
     .footer {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 50px;
     }
 
     .footer-logo {
         margin-bottom: 40px;
+        display: block;
+        margin: 0 auto;
     }
 
     .footer-list {
-        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-right: 0;
+    }
+
+    .footer-item {
+        text-align: center;
     }
 
     .coppyright {

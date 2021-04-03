@@ -6,6 +6,7 @@
         &:nth-child(2) {
             .feature-img {
                 order: 2;
+                z-index: 2;
             }
 
             .feature-info {
