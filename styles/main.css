@@ -102,12 +102,17 @@ body {
 
 .modal {
   display: none;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.active-modal {
+  display: block;
 }
 
 .banner {
@@ -468,7 +473,7 @@ body {
 
 .subscribe__form {
   position: relative;
-  width: 620px;
+  width: 600px;
   background-color: #f2f1f6;
 }
 
@@ -652,6 +657,11 @@ body {
   .subscribe__form {
     width: 100%;
   }
+  .subscribe__social-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .footer {
     margin-bottom: 160px;
   }
@@ -665,9 +675,123 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .navbar-menu,
-  .navbar__auth {
+  .navbar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    z-index: 5;
+  }
+  .navbar-sticky::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -10%;
+    width: 10.2%;
+    background-color: white;
+  }
+  .navbar-sticky::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: -10%;
+    width: 10.2%;
+    background-color: white;
+  }
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    bottom: 0;
+    width: 60%;
+    z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    padding-top: 100px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    opacity: 1;
+  }
+  .navbar .btn {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+  .active-menu {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 1;
+  }
+  .navbar-menu-item {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  .navbar-menu-item .navbar-menu-icon {
     display: none;
+  }
+  .hamburger {
+    z-index: 4;
+    height: 4rem;
+    width: 3rem;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .hamburger .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #000;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .bar::before,
+  .bar::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #000;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .bar::before {
+    -webkit-transform: translateY(-9px);
+            transform: translateY(-9px);
+  }
+  .bar::after {
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+  .active .bar {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background-color: transparent;
+  }
+  .active .bar:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .hamburger.active .bar:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   .banner-heading {
     font-size: 40px;
@@ -877,6 +1001,23 @@ body {
   }
   .coppyright-privacy {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .banner-action {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner-action .btn {
+    margin: 0;
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
